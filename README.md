@@ -8,7 +8,7 @@ This is a simple blog application built using Spring Boot. It allows users to cr
 
 To run this application, you will need the following:
 
-* Java 8 or later
+* Java 15 or later
 * Maven
 * MySQL
 
