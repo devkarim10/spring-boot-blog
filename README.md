@@ -33,16 +33,6 @@ spring.datasource.password=<your_mysql_password>
 The application will now be available at http://localhost:8080.
 
     
-## Usage
-
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
-
 
 ## Technologies Used
 
