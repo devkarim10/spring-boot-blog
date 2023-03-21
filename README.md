@@ -1,5 +1,5 @@
 
-# Spring Boot Blog
+# WriteWise Blog
 
 This is a simple blog application built using Spring Boot. It allows users to create, read, update, and delete blog posts. Users can also leave comments on blog posts and can upvote and downvote for a comments.
 
@@ -44,6 +44,8 @@ The application will now be available at http://localhost:8080.
 * Spring Security
 * Java Mail Sender
 * Mapper
+* Angular [Frontend repo](https://github.com/devkarim10/angular-blog)
+
 
 ## Contributing
 
