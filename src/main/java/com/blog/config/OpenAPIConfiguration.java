@@ -12,14 +12,12 @@ public class OpenAPIConfiguration {
 
 
     @Bean
-    public OpenAPI expenseAPI() {
+    public OpenAPI customOpenAPI() {
         return new OpenAPI()
-                .info(new Info().title("Reddit Clone API")
-                        .description("API for Reddit Clone Application")
-                        .version("v0.0.1")
-                        .license(new License().name("Apache License Version 2.0").url("http://programmingtechie.com")))
-                .externalDocs(new ExternalDocumentation()
-                        .description("Expense Tracker Wiki Documentation")
-                        .url("https://expensetracker.wiki/docs"));
+                .info(new Info().title("My API")
+                        .description("Blog API")
+                        .version("1.0.0")
+                        .license(new License().name("Apache 2.0").url("http://springdoc.org")));
     }
+
 }

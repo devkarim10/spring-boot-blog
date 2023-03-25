@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.BeanIds;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer;
@@ -54,14 +53,10 @@ public class SecurityConfig {
                         .permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/posts/**")
                         .permitAll()
-                        .requestMatchers("/v2/api-docs",
-                                "/configuration/ui",
-                                "/swagger-resources/**",
-                                "/configuration/security",
-                                "/swagger-ui/index.html",
-                                "/webjars/**")
+                        .requestMatchers("/v3/api-docs/**",
+                                "/swagger-ui/**",
+                                "/swagger-ui.html")
                         .permitAll()
-
                         .anyRequest()
                         .authenticated())
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
@@ -72,16 +67,15 @@ public class SecurityConfig {
                 ).build();
 
 
-
     }
 
-    @Bean(BeanIds.AUTHENTICATION_MANAGER)
+    @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
