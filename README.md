@@ -47,6 +47,13 @@ The application will now be available at http://localhost:8080.
 * Angular [Frontend repo](https://github.com/devkarim10/angular-blog)
 
 
+## Documentation
+
+[Documentation](https://localhost:8080/swagger-ui/index.html)
+
+
+
+
 ## Contributing
 
 Contributions are always welcome!
